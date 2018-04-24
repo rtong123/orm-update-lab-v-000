@@ -62,7 +62,7 @@ attr_accessor :id, :name, :grade
      self.new_from_db(row)
    end.first
   end
- 
+
 
  def update
  end
