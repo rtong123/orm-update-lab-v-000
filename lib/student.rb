@@ -43,4 +43,7 @@ attr_accessor :id, :name, :grade
  def self.find_by_name
  end
 
+ def update
+ end
+
 end
