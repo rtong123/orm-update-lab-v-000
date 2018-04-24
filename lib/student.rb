@@ -40,7 +40,10 @@ attr_accessor :id, :name, :grade
    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
  end
 
- def self.create
+ def self.create(name:, grade:)
+   student = Student.new(name,grade)
+   student.save
+   student 
  end
 
  def self.new_from_db
