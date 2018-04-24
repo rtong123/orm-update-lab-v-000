@@ -48,7 +48,10 @@ attr_accessor :id, :name, :grade
  end
 
  def self.new_from_db(array)
-   binding.pry
+   student = Student.new
+   student.id = array[0]
+   student.name = array[1]
+   student.grade = array[2]
  end
 
  def self.find_by_name
