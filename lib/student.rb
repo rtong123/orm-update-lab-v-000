@@ -48,11 +48,11 @@ attr_accessor :id, :name, :grade
  end
 
  def self.new_from_db(array)
-   student = Student.new(id,name,grade)
-   student.id = array[0]
-   student.name = array[1]
-   student.grade = array[2]
-   student
+   new_student = Student.new(id,name,grade)
+   new_student.id = array[0]
+   new_student.name = array[1]
+   new_student.grade = array[2]
+   new_student
  end
 
  def self.find_by_name
